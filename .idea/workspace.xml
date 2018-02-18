@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="310b146a-6655-4505-8ae3-13686ea25c2f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/BFME Resolution Changer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApplicationDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BFMEResModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ViewController.java" afterDir="false" />
-    </list>
+    <list default="true" id="310b146a-6655-4505-8ae3-13686ea25c2f" name="Default" comment="Initial commit" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -535,16 +529,15 @@
       <option name="presentableId" value="Default" />
       <updated>1518987642610</updated>
       <workItem from="1518987644455" duration="1228000" />
-      <workItem from="1518988999913" duration="1278000" />
+      <workItem from="1518988999913" duration="1526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2506000" />
+    <option name="totallyTimeSpent" value="2754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
