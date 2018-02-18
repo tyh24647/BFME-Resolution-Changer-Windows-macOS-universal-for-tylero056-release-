@@ -1,4 +1,4 @@
-#BFME Resolution Changer
+# BFME Resolution Changer
 
 -------
 
@@ -6,7 +6,7 @@
 
 ------
 
-####Description
+#### Description
 
 This application is a cross-platform easy resolution switcher for my releases of the following Lord of the Rings games: "The Battle for Middle-Earth", "The Battle for Middle-Earth II", and "Rise of the Witch King".
 
