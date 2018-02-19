@@ -87,7 +87,7 @@ public class MainGUI extends JFrame implements WindowFocusListener {
         btnPanel.setBackground(Color.BLACK);
         gameSelectionPanel.setOpaque(false);
         //gameSelectionPanel.setBounds(0,0, 800, 40);
-        //gameSelectionPanel.setPreferredSize(new Dimension(800, 40));
+        gameSelectionPanel.setPreferredSize(new Dimension(800, 40));
 
 
         centerPanel = new JPanel(new BorderLayout(30, 60));
@@ -158,7 +158,7 @@ public class MainGUI extends JFrame implements WindowFocusListener {
         label.setPreferredSize(new Dimension(60, getContentPane().getHeight()));
         centerPanel.add(label, WEST);
         label = new JLabel("");
-        label.setPreferredSize(new Dimension(super.getWidth(), 60));
+        label.setPreferredSize(new Dimension(super.getWidth(), 40));
         centerPanel.add(label, BorderLayout.SOUTH);
         centerPanel.add(new JLabel(""), BorderLayout.NORTH);
         centerPanel.setOpaque(false);
@@ -230,7 +230,6 @@ public class MainGUI extends JFrame implements WindowFocusListener {
         return layeredPane;
     }
 
-
     private ImageIcon getImgResource(String imgPath) throws Exception {
         BufferedImage bufferedImage = ImageIO.read(getClass().getResource(imgPath));
         ImageIcon imgIcon = new ImageIcon(bufferedImage);
@@ -283,6 +282,7 @@ public class MainGUI extends JFrame implements WindowFocusListener {
         launchMainWindow();
 
 
+
     }
 
     private void configureMainWindow() {
@@ -291,44 +291,12 @@ public class MainGUI extends JFrame implements WindowFocusListener {
         getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
         setResizable(false);
         setTitle(StringConstants.Titles.MAIN_PANEL);
-        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         setLocationRelativeTo(null);
     }
 
     private void launchMainWindow() {
         pack();
-        //revalidate();
         setVisible(true);
-    }
-
-    public void toggleGameRadioBtns(boolean isB1action) {
-        if (isB1action && b1Btn.isSelected()) {
-            b1Btn.setSelected(true);
-        } else if (!isB1action && b2Btn.isSelected()) {
-            b2Btn.setSelected(true);
-        }
-
-        if (isB1action) {
-            if (!b1Btn.isSelected()) {
-                b1Btn.setSelected(true);
-                b2Btn.setSelected(false);
-            } else {
-                b1Btn.setSelected(false);
-                b2Btn.setSelected(true);
-            }
-        } else {
-            if (!b2Btn.isSelected()) {
-                b1Btn.setSelected(false);
-                b2Btn.setSelected(true);
-            } else {
-                b1Btn.setSelected(true);
-                b2Btn.setSelected(false);
-            }
-        }
-
-        if (b2Btn.isSelected()) {
-            lotrTitleTxt1.setText(lotrTitleTxt1.getText() );
-        }
     }
 
     //region SETTERS AND GETTERS

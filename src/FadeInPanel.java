@@ -45,8 +45,8 @@ public class FadeInPanel extends JPanel implements ActionListener {
 
     private Image image = new ImageIcon("assets/b1.png").getImage();
     private Image image2 = new ImageIcon("assets/b2.png").getImage();
-    private Timer timer = new Timer(15, this);
-    private Timer timer2 = new Timer(15, this);
+    private Timer timer = new Timer(20, this);
+    private Timer timer2 = new Timer(20, this);
 
     private static float alpha = 1.0f;
     private static float alpha2 = 0.0f;
