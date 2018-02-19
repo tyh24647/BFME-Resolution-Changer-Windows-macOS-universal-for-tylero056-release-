@@ -1,4 +1,6 @@
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
 
 /**
  * @author Tyler Hostager
@@ -6,23 +8,29 @@ import javax.swing.JFrame;
  * @since 2/18/18
  */
 public class MainGUI extends JFrame {
+    private JPanel mainPanel;
+
 
 
     public MainGUI() {
 
     }
 
-    public boolean generateViewComponents() {
-        boolean success = true;
+    public void generateViewComponents() {
 
-        return success;
     }
 
-    public boolean showUI() {
-        boolean success = true;
+    public void generateMainPanel() {
+        if (mainPanel == null) {
+            this.mainPanel = new JPanel(new BorderLayout());
+        }
+    }
+
+    public void showUI() throws NullPointerException {
+        if (mainPanel == null) {
+            generateMainPanel();
+        }
 
 
-
-        return success;
     }
 }
