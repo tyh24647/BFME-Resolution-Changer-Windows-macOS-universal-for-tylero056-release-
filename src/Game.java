@@ -30,5 +30,25 @@
  * @since 2/18/18
  */
 public enum Game {
-    BFME1, BFME2
+    BFME1("BFME1"),
+    BFME2("BFME2");
+
+    private String name;
+
+    Game(final String str) {
+        this.name = str;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean equalsName(String name) {
+        return this.name.equals(name);
+    }
+
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 }

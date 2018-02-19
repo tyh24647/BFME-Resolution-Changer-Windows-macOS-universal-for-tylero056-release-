@@ -23,7 +23,7 @@ public class ResObject {
     }
 
     public ResObject(Integer xVal, Integer yVal) {
-        setDescription(null);
+        setDescription(null, xVal, yVal);
         setxVal(xVal);
         setyVal(yVal);
     }
@@ -40,6 +40,10 @@ public class ResObject {
                 StringConstants.GameSettings.Resolution.DEFAULT_INI_X_VAL
                         + "x" + StringConstants.GameSettings.Resolution.DEFAULT_INI_Y_VAL
                 : description;
+    }
+
+    public void setDescription(String description, Integer xVal, Integer yVal) {
+        this.description = description == null ? xVal + "x" + yVal : description;
     }
 
     public void setxVal(Integer xVal) {

@@ -6,6 +6,8 @@
 public class BFMEResModel {
     private String applicationPath;
     private Game selectedGame;
+    private Integer xRes;
+    private Integer yRes;
 
     public BFMEResModel() {
         setSelectedGame(Game.BFME1);
