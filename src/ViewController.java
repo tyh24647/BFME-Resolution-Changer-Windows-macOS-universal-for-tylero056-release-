@@ -2,6 +2,8 @@ import com.sun.istack.internal.NotNull;
 
 import javax.swing.*;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.*;
 import java.util.concurrent.CompletableFuture;
 
@@ -58,6 +60,18 @@ public class ViewController implements ActionListener {
         this.previousCmd = "BFME1";
         initUI();
         addActionListeners();
+        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+        Double x = dimension.getWidth();
+        Double y = dimension.getHeight();
+        JOptionPane.showMessageDialog(ui, ("Your computer's " +
+                "native resolution has been detected to be: \"").concat(String.valueOf(x)).concat("x")
+                .concat(String.valueOf(y)).concat("\"\nSetting value as default."));
+        for (int i = 0; i < ui.getResChooser().getItemCount() - 1; i++) {
+            if (((String)ui.getResChooser().getItemAt(i)).substring(0, 2).contains(x.toString().substring(0, 2))) {
+                ui.getResChooser().setSelectedItem(ui.getResChooser().getItemAt(i));
+                ui.getResChooser().setSelectedIndex(i);
+            }
+        }
     }
 
     public void initUI() {
