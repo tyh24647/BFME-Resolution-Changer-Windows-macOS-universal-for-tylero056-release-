@@ -1,7 +1,5 @@
 # BFME Resolution Changer
 
--------
-
 **Download Link**: *coming soon*
 
 ------
