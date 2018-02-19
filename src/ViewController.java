@@ -1,3 +1,5 @@
+import com.sun.istack.internal.NotNull;
+
 import javax.swing.JComponent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,12 +38,12 @@ public class ViewController implements ActionListener {
      * @param model
      * @param ui
      */
-    public ViewController(BFMEResModel model, MainGUI ui) {
+    public ViewController(@NotNull BFMEResModel model, @NotNull MainGUI ui) {
         this.model = model;
         this.ui = ui;
     }
 
-    public ViewController(boolean isDebug, BFMEResModel model, MainGUI ui) {
+    public ViewController(boolean isDebug, @NotNull BFMEResModel model, @NotNull MainGUI ui) {
         this.isDebug = isDebug;
         this.model = model;
         this.ui = ui;
@@ -53,6 +55,8 @@ public class ViewController implements ActionListener {
 
     public void initUI(boolean isDebug) {
         this.isDebug = isDebug;
+
+
         ui.showUI();
     }
 
